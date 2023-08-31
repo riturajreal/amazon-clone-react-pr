@@ -1,24 +1,41 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import { ProductDetails } from "./";
 
 import { callAPI } from "../utils/CallApi";
 import { GB_CURRENCY } from '../utils/constants'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../redux/cartSlice'
 
 
 
 const ProductPage = () => {
+
+  const dispatch =useDispatch();
+
   const { id } = useParams();
+
+  // tracking quantity of products
+  const [quantity, setQuantity] = useState("1");
+
 
   // to update product state
   const [product, setProduct] = useState(null);
+
 
   const getProduct = () => {
     callAPI(`data/products.json`).then((productResults) => {
       setProduct(productResults[id]);
     });
   };
+
+  const addQuantityToProduct = () => { 
+
+    setProduct(product.quantity = quantity);
+    return product;
+
+   };
 
   useEffect(() => {
     getProduct();
@@ -58,14 +75,17 @@ const ProductPage = () => {
             <div className="text-sm  text-blue-500 font-semibold mt-1">FREE Delivery</div>
             <div className="text-base text-green-500 font-semibold mt-1">In Stock</div>
             <div className="text-base font-semibold mt-2">Ouantity : 
-                <select className="p-2 text-base border rounded-md focus:border-indigo-600 ">
+                <select onChange={(e) => setQuantity(e.target.value)} className="p-2 text-base border rounded-md focus:border-indigo-600 ">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
                 </select>
             </div>
-
-            <button className="bg-yellow-400 w-full p-3 text-sm rounded hover:bg-yellow-500 mt-4">Add to Cart</button>
+            
+            <Link to={"/checkout"}>
+            <button onClick={() =>dispatch(addToCart(addQuantityToProduct()))} className="bg-yellow-400 w-full text-center p-3 text-sm rounded hover:bg-yellow-500 mt-4">Add to Cart</button>
+            </Link>
+           
           </div>
         </div>
       </div>

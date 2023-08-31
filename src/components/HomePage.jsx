@@ -9,7 +9,7 @@ const HomePage = () => {
 
 
         {/* cards */}
-        <div className="grid grid-cols-3 xl:grid-cols-4 -mt-80">
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 -mt-80">
           <HomePageCard
             title="We have a Surprise for you"
             img={"../images/home_grid_1.jpg"}

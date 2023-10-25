@@ -3,12 +3,15 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        'onest': ['Onest', 'sans-serif']
+      },
       colors: {
         amazonclone: {
-          background: "#EAEDED",
+          background: "#EBEBEB",
           light_blue: "#232F3A",
-          yellow: "#FEBD69",
-          DEFAULT: "#131921",
+          yellow: "#212326",
+          DEFAULT: "#23836B",
         },
       },
     },

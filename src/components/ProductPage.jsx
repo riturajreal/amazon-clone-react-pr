@@ -49,12 +49,12 @@ const ProductPage = () => {
       <div className="min-w-[1000px] max-w-[1500px] m-auto p-4">
         <div className="grid grid-cols-10 gap-2">
           {/* left side */}
-          <div className="col-span-3 p-8 rounded bg-white m-auto">
-            <img src={`${product.image}`} alt="" />
+          <div className="col-span-3 p-8 rounded-xl bg-white m-auto">
+            <img className="rounded-lg" src={`${product.image}`} alt="" />
           </div>
 
           {/* Middle */}
-          <div className="col-span-5 p-4 rounded bg-white divide-y divide-gray-400">
+          <div className="col-span-5 p-4 rounded-xl bg-white divide-y divide-gray-400">
           {/* ratings */}
               <div className="mb-3">
                 <ProductDetails product={product} ratings={true} />
@@ -68,7 +68,7 @@ const ProductPage = () => {
 
           
           {/* right */}
-          <div className="col-span-2 p-4 rounded bg-white">
+          <div className="col-span-2 p-4 rounded-xl bg-white">
             <div className="text-2xl text-orange-500 font-semibold">{GB_CURRENCY.format(product.price)}</div>
             <div className="text-md text-gray-400 font-semibold line-through">{GB_CURRENCY.format(product.oldPrice)}</div>
             <div className="text-sm  text-blue-500 font-semibold mt-4">FREE Returns</div>
@@ -83,7 +83,7 @@ const ProductPage = () => {
             </div>
             
             <Link to={"/checkout"}>
-            <button onClick={() =>dispatch(addToCart(addQuantityToProduct()))} className="bg-yellow-400 w-full text-center p-3 text-sm rounded hover:bg-yellow-500 mt-4">Add to Cart</button>
+            <button onClick={() =>dispatch(addToCart(addQuantityToProduct()))} className="bg-amazonclone-yellow text-white w-full text-center p-3 text-sm rounded hover:bg-yellow-500 mt-4">Add to Cart</button>
             </Link>
            
           </div>

@@ -6,7 +6,7 @@ import "swiper/css/navigation"
 
 const Carousel = () => {
   return (
-    <div className='h-[600px]'>
+    <div className='h-[320px] z-20'>
 
     <Swiper 
         loop = {true}
@@ -17,7 +17,7 @@ const Carousel = () => {
         autoplay = {{
             delay:2500
         }}
-        className='h-[50%]'
+        className='h-[310px] rounded-xl'
     >
 
     <SwiperSlide>
@@ -30,7 +30,7 @@ const Carousel = () => {
 
     <SwiperSlide className='bg-black'>
 
-    <video controls muted="muted">
+    <video  muted="muted" className='w-[100%]'>
         <source src ={"../images/carousel_vid.mp4"} type="video/mp4" />
     </video>
     </SwiperSlide>
@@ -45,8 +45,6 @@ const Carousel = () => {
 
 
     </Swiper>
-
-    <div className='h-[50%]  bg-gradient-to-b from-stone-900 '></div>
       
     </div>
   )

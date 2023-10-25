@@ -10,22 +10,22 @@ const Navbar = () => {
   const cart = useSelector((state) => state.cart.productsNumber)
 
   return (
-    <header className="min-w-[1000px]">
+    <header className="max-w-[1700px] mt-5 mb-5 mx-auto z-40">
       {/* main container */}
-      <div className="flex  bg-amazonclone text-white h-[60px]">
+      <div className="flex rounded-xl bg-amazonclone text-white h-[60px]">
         {/* left */}
         <div className="flex items-center m-4">
           {/* amazon image */}
 
           <Link to={"/"}> 
           <img
-            className="h-[35px] w-[100px] m-2"
-            src={"../images/amazon.png"}
+            className="h-[38px] w-[126px] m-2"
+            src={"../images/renewdLogo.png"}
             alt=""
           /></Link>
 
           <div className="pr-4 pl-4">
-            <div className="text-xs text-gray-400 xl:text-sm">Delivering to A House, UK </div>
+            <div className="text-xs text-white xl:text-sm">Delivering to A House, UK </div>
             <div className="text-md xl:text-base font-bold">Choose location for most accurate options</div>
           </div>
         </div>
@@ -55,8 +55,8 @@ const Navbar = () => {
             <ShoppingCartIcon className="h-[48px]" />
 
             {/* cart value */}
-            <div className="relative bg-orange-400">
-            <div className="absolute h-5 w-5 rounded-xl bg-orange-400  -right-[7px] bottom-4 text-sm m-2 text-center mt-3 font-bold text-black">
+            <div className="relative bg-amazonclone-yellow">
+            <div className="absolute h-5 w-5 rounded-xl bg-amazonclone-yellow -right-[7px] bottom-4 text-sm m-2 text-center mt-3 font-bold text-white">
               {cart}
             </div>
 
@@ -70,15 +70,6 @@ const Navbar = () => {
         </div>
 
       </div>
-
-{/* deals */}
-      <div className="flex bg-amazonclone-light_blue text-white space-x-3 text-sm p-2 pl-6">
-            <div>Today's Deals</div>
-            <div>Customer Service</div>
-            <div>Registery</div>
-            <div>Gift Card</div>
-            <div>Sell</div>
-        </div>
 
     </header>
   );

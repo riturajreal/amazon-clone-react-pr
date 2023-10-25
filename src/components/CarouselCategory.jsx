@@ -24,7 +24,7 @@ const CarouselCategory = () => {
 
 
   return (
-    <div className='bg-white m-3 p-3'>
+    <div className='bg-white rounded-xl m-3 p-3'>
 
     <div className='text-2xl font-semibold'>Shop by Category</div>
 

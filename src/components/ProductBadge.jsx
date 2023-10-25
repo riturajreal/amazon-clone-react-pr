@@ -1,5 +1,3 @@
-
-
 const ProductBadge = ({ badge }) => {
     
   if (badge === "choice") {

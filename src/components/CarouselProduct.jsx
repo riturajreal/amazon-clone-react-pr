@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 
 const CarouselProduct = () => {
   return (
-    <div className='bg-white m-3 p-3'>
+    <div className='bg-white rounded-xl m-3 p-3'>
 
     <div className='text-2xl font-semibold p-3'>Best Sellers</div>
 
@@ -23,7 +23,7 @@ const CarouselProduct = () => {
         Array.from( { length:9}, (_,i) => 
                 <SwiperSlide>
                 <Link to={`/product/${i}`}>
-                     <img className='h-[200px] bg-cover rounded-md' src={`../images/product_${i}_small.jpg`} alt="" />
+                     <img className='h-[200px] bg-cover rounded-lg' src={`../images/product_${i}_small.jpg`} alt="" />
                 </Link>
                     
                 </SwiperSlide> 

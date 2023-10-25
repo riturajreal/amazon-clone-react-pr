@@ -3,7 +3,7 @@ import { Carousel, HomePageCard, CarouselCategory, CarouselProduct} from "./";
 const HomePage = () => {
   return (
     <div className="bg-amazonclone-background">
-      <div className="min-w-[1000px] max-w-[1800px] m-auto gap-2">
+      <div className="min-w-[1000px] max-w-[1500px] m-auto gap-2">
         {/* carousel */}
         <Carousel />
 
@@ -11,27 +11,27 @@ const HomePage = () => {
         {/* cards */}
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
           <HomePageCard
-            title="We have a Surprise for you"
-            img={"../images/home_grid_1.jpg"}
-            link={"See the terms & Conditions"}
+            title="Branded Shoes 50% off"
+            img={"../images/f2.png"}
+            link={"2 Days left"}
           />
 
           <HomePageCard
-            title="Watch Rings of Power"
-            img={"../images/home_grid_2.jpg"}
-            link={"Start Streaming Now"}
+            title="Laptop Deals"
+            img={"../images/f1.png"}
+            link={"Grab the deal"}
           />
 
           <HomePageCard
-            title="Unlimited Streaming"
-            img={"../images/home_grid_3.jpg"}
+            title="Premium Watches"
+            img={"../images/f3.png"}
             link={"Find out more"}
           />
 
           <HomePageCard
-            title="More Titles to explore"
-            img={"../images/home_grid_4.jpg"}
-            link={"Browse Kindle Unlimited"}
+            title="Explore Men's Clothing"
+            img={"../images/f4.png"}
+            link={"View Offers"}
           />
 
           <HomePageCard

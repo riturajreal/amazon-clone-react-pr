@@ -2,7 +2,7 @@ import React from "react";
 
 const HomePageCard = ({ title, img, link }) => {
   return (
-    <div className="max-h-[420px] flex flex-col bg-white rounded-xl hover:scale-110 m-3">
+    <div className="max-h-[420px] flex flex-col bg-white rounded-xl hover:scale-105 m-3">
       <div className="font-semibold text-[1.2rem] ml-4 mt-4">{title}</div>
 
       <div className="max-h-[300px] m-4">

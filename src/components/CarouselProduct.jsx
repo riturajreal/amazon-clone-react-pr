@@ -13,7 +13,7 @@ const CarouselProduct = () => {
     <div className='text-2xl font-semibold p-3'>Best Sellers</div>
 
     <Swiper
-        slidesPerView ={7}
+        slidesPerView ={8}
         spaceBetween ={10}
         navigation ={true}
         modules = {[Navigation]}
@@ -23,7 +23,7 @@ const CarouselProduct = () => {
         Array.from( { length:9}, (_,i) => 
                 <SwiperSlide>
                 <Link to={`/product/${i}`}>
-                     <img className='h-[200px] bg-cover rounded-lg' src={`../images/product_${i}_small.jpg`} alt="" />
+                     <img className='mx-12 h-[200px] bg-cover rounded-lg' src={`../images/product_${i}_small.jpg`} alt="" />
                 </Link>
                     
                 </SwiperSlide> 

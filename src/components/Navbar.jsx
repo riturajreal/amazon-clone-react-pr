@@ -2,6 +2,7 @@ import { Search } from "./";
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import {Log,AdminAuth} from "./";
 
 
 
@@ -36,7 +37,7 @@ const Navbar = () => {
         </div>
 
         {/* right */}
-        <div className="flex items-center m-4">
+        <div className="flex items-center gap-3 m-4">
           <div className="pr-4 pl-4">
             <div className="text-xs xl:text-sm">Hello, Sign in</div>
             <div className="text-sm xl:text-base font-bold">
@@ -66,8 +67,20 @@ const Navbar = () => {
           </div>
           </Link>
 
+          {/* user */}
+        <Link to={"/log"}>
+            <div className="bg-amazonclone-yellow px-3 py-2 rounded-lg text-white">Log in</div>
+          </Link>
+
+          {/* admin */}
+          <Link to={"/adminauth"}>
+            <div className="bg-white px-3 py-2 rounded-lg text-black">Become a Seller</div>
+          </Link>
 
         </div>
+
+
+        
 
       </div>
 

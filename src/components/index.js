@@ -14,3 +14,4 @@ export { default as ProductRatings} from "./ProductRatings";
 export {default as Log} from "./Log";
 export {default as SignUp} from "./SignUp";
 export {default as AdminAuth} from "./AdminAuth";
+export {default as Cta} from "./Cta";

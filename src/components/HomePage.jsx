@@ -1,9 +1,9 @@
-import { Carousel, HomePageCard, CarouselCategory, CarouselProduct} from "./";
+import { Carousel, HomePageCard, CarouselCategory, CarouselProduct, Cta} from "./";
 
 const HomePage = () => {
   return (
     <div className="bg-amazonclone-background">
-      <div className="min-w-[1000px] max-w-[1500px] m-auto gap-2">
+      <div className="min-w-[1000px] max-w-[1500px] m-auto gap-2 mb-20">
         {/* carousel */}
         <Carousel />
 
@@ -73,8 +73,8 @@ const HomePage = () => {
 
         <CarouselProduct />
         <CarouselCategory />
-
-
+        <Cta/>
+        
       </div>
     </div>
   );
